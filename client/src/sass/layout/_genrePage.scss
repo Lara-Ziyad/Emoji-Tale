@@ -1,0 +1,40 @@
+.genre {
+  &__row {
+    width: 100%;
+    @include flex(row, center, center);
+  }
+
+  &__card {
+    height: 7rem;
+    cursor: pointer;
+    width: 10rem;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__story--card {
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $main-black;
+    margin: 1rem;
+  }
+}
+
+.genre-show {
+  width: 100%;
+  @include flex(column, center, center);
+
+  &__select {
+    margin-bottom: 1rem;
+    width: 100%;
+    @include flex(row, flex-end, center);
+  }
+
+  &__empty {
+    @include flex(row, center, center);
+  }
+}

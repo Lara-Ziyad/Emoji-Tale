@@ -1,0 +1,119 @@
+
+
+.story-card-big {
+  width: 95%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 6px -6px $main-black;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  background-color: $main-white;
+  width: 100%;
+
+
+  &:hover {
+    box-shadow: 0 1rem 7px -5px $main-black;
+  }
+
+  &__emojis {
+    @include flex(row, space-around, center);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background: white;
+
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid $main-d-grey;
+
+
+
+    &--center {
+      @include flex(row, center, center);
+      width: 90%;
+    }
+
+    &--size {
+      font-size: 6rem;
+    }
+  }
+
+  &__info {
+    padding: 1rem;
+    width: 100%;
+
+    @include flex(column, space-between, start);
+  
+  }
+
+  &__story {
+    margin-bottom: 0.5rem;
+    &--bold {
+      @include main-font(2rem, 500, $main-black);
+    }
+    &--small {
+      @include main-font(1.5rem, 300, $main-black);
+    }
+  }
+
+  &__categories {
+    @include flex(row, start, center);
+  }
+
+  &__box {
+    border: 1px solid $main-black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $main-white;
+  }
+
+  &__text {
+    padding: 0 1rem;
+    line-height: 1.5;
+    width: 100%;
+    @include flex(row, start, start);
+  }
+
+  &__footer {
+    border-top: $main-border;
+    padding: 1rem;
+    @include flex(row, space-between, start);
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  &__read-more {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+
+    &:hover {
+      color: $main-d-blue;
+    }
+  }
+
+  &__social {
+    @include flex(row, center, center);
+  }
+
+  &__like,
+  &__comments,
+  &__views {
+    font-size: 1.5rem;
+    padding: 0px 2rem;
+  }
+}
+
+.left-yourStories {
+  @include flex(column, space-between, start);
+  height: 30vh;
+  margin-top: 20vh;
+
+  &__footer {
+    padding: 15px;
+  }
+}
